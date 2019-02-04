@@ -1,0 +1,45 @@
+import java.util.*;
+import java.io.*
+
+Class distance{
+	private int feet;
+	private int inches;
+
+	public void getDistance(){
+	Scanner sc= new Scanner (System.in);
+
+	System.out.println("Enter feet");
+	feet=sc.nextInt();
+	System.out.println("enter inches:");
+	inches=sc.nextInt();
+
+	}
+	public void showDistance(){
+	System.out.println("Feet: " +feet +"Inches "+inches);
+
+	}
+	public void addDistance(Distance d1, Distance d2)
+	{
+		inches=d1.inches+d2.inches;
+		feet=feet.d1+feet.d2+(inches/12);
+		inches=inches%12;
+	}
+}
+public Class AddTwoDistance{
+	 public static void main(String args[]){
+	 	Distance d1=new Distance();
+	 	Distance d2=new Distance();
+	 	Distance d3=new Distance();
+
+	 	System.out.println("Enter first distance");
+	 	d1.getDistance();
+
+	 	System.out.println("enter second distance");
+	 	d2.getDistance();
+
+	 	d3.addDistance(d1,d2);
+
+	 	System.out.println("Total distance=");
+	 	d3.showDistance();
+	 }
+}
