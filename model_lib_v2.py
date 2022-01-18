@@ -663,7 +663,7 @@ def train_loop(
           """A distributed train step."""
 
           if num_steps_per_iteration > 1:
-            for _ in tf.range(num_steps_per_iteration - 1):
+            for _ in range(num_steps_per_iteration - 1):
               # Following suggestion on yaqs/5402607292645376
               with tf.name_scope(''):
                 _sample_and_train(strategy, train_step_fn, data_iterator)
